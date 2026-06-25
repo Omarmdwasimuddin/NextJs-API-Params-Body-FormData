@@ -84,9 +84,22 @@ export async function POST(request:Request) {
 
 ### Form Data
 
-![]()
+![](https://imgur.com/ykBF7fu.png)
 
 ```bash
+import { NextResponse } from "next/server";
 
+export async function PUT(request:Request) {
+
+    let formData = await request.formData();
+    let mobile = formData.get('Mobile');
+    let email = formData.get('Email');
+    let designation = formData.get('Designation');
+    
+    return NextResponse.json(
+        {status: "Success response", message: {mobile, email, designation}},
+        {status: 200}
+    )
+}
 ```
 ---
