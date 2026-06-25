@@ -2,7 +2,7 @@
 
 ### Search Params
 
-![]()
+![](https://imgur.com/jCj0iS5.png)
 
 ```bash
 import { NextResponse } from "next/server";
