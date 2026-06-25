@@ -24,7 +24,7 @@ export async function GET(request:Request) {
 
 ### Multiple Parameter
 
-![]()
+![](https://imgur.com/djqGudL.png)
 
 ```bash
 import { NextResponse } from "next/server";
