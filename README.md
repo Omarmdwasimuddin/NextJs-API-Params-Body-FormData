@@ -62,4 +62,23 @@ export async function POST(request:Request) {
     )
 }
 ```
+
+![](https://imgur.com/CxZjzSm.png)
+
+```bash
+import { NextResponse } from "next/server";
+
+export async function POST(request:Request) {
+
+    const requestBody = await request.json()
+    
+    return NextResponse.json(
+        {status: "Success response", message: requestBody['name']},
+        {status: 200}
+    )
+}
+```
+
 ---
+
+### 
