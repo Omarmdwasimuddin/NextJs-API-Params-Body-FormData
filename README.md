@@ -20,3 +20,27 @@ export async function GET(request:Request) {
 }
 ```
 ---
+
+
+### Multiple Parameter
+
+![]()
+
+```bash
+import { NextResponse } from "next/server";
+
+
+export async function GET(request:Request) {
+
+    const {searchParams} = new URL(request.url);
+    let name = searchParams.get('name');
+    let email = searchParams.get('email');
+    let designation = searchParams.get('designation');
+    
+    return NextResponse.json(
+        {status: "Success response", message: {name, email, designation}},
+        {status: 200}
+    )
+}
+```
+---
