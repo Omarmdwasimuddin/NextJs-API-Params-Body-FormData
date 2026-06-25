@@ -47,9 +47,19 @@ export async function GET(request:Request) {
 
 ### Body
 
-![]()
+![](https://imgur.com/KjVH1v6.png)
 
 ```bash
+import { NextResponse } from "next/server";
 
+export async function POST(request:Request) {
+
+    const requestBody = await request.json()
+    
+    return NextResponse.json(
+        {status: "Success response", message: requestBody},
+        {status: 200}
+    )
+}
 ```
 ---
