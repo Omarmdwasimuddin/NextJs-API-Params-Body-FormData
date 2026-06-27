@@ -5,10 +5,10 @@
 ![](https://imgur.com/jCj0iS5.png)
 
 ```bash
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
 
-export async function GET(request:Request) {
+export async function GET(request:NextRequest) {
 
     const {searchParams} = new URL(request.url);
     let id = searchParams.get('id');
@@ -27,10 +27,10 @@ export async function GET(request:Request) {
 ![](https://imgur.com/djqGudL.png)
 
 ```bash
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
 
-export async function GET(request:Request) {
+export async function GET(request:NextRequest) {
 
     const {searchParams} = new URL(request.url);
     let name = searchParams.get('name');
@@ -50,9 +50,9 @@ export async function GET(request:Request) {
 ![](https://imgur.com/KjVH1v6.png)
 
 ```bash
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
-export async function POST(request:Request) {
+export async function POST(request:NextRequest) {
 
     const requestBody = await request.json()
     
@@ -67,9 +67,9 @@ export async function POST(request:Request) {
 ![](https://imgur.com/CxZjzSm.png)
 
 ```bash
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
-export async function POST(request:Request) {
+export async function POST(request:NextRequest) {
 
     const requestBody = await request.json()
     
@@ -87,9 +87,9 @@ export async function POST(request:Request) {
 ![](https://imgur.com/ykBF7fu.png)
 
 ```bash
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
-export async function PUT(request:Request) {
+export async function PUT(request:NextRequest) {
 
     let formData = await request.formData();
     let mobile = formData.get('Mobile');
